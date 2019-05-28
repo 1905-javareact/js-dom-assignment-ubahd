@@ -139,7 +139,16 @@ let arrayofes = [...alles]
 // 	<h5 id="currentTime"></h5>
 // Show the current time in this element in this format: 9:05:23 AM
 // The time should be accurate to the second without having to reload the page.
+function getcurrenttime(){
+let time = document.getElementById("currentTime")
+let interval = setInterval(() => {
+    let nd = new Date()
+    time.innerHTML = nd.toLocaleTimeString()
+}, 1000)
+return interval
+}
 
+getcurrenttime()
 
 // 11. Delay
 // Regarding this element:
